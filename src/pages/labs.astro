@@ -1,0 +1,46 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout 
+    title="Labs | Not Nahid" 
+    description="Experimental projects, GitHub activity, and fun dev-related snippets from my digital lab."
+    activePage="labs"
+>
+    <a href="/" data-astro-prefetch class="pill-btn back-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Back
+    </a>
+
+    <h1 class="page-title">Labs</h1>
+
+    <div class="content-grid">
+        <div style="grid-column: 1 / -1;">
+            <span class="section-label">Currently Reading</span>
+            <table class="data-table">
+                <tr><th>Book</th><th>Author</th><th>Rating</th></tr>
+                <tr><td>📖 In Search of Lost Time</td><td>Marcel Proust</td><td>⭐ 4.35</td></tr>
+                <tr><td>📖 The Broken Wings</td><td>Kahlil Gibran</td><td>⭐ 4.11</td></tr>
+                <tr><td>📖 The Plague</td><td>Albert Camus</td><td>⭐ 4.05</td></tr>
+                <tr><td>📖 Bartleby the Scrivener</td><td>Herman Melville</td><td>⭐ 3.91</td></tr>
+                <tr><td>📖 বলাকা</td><td>Rabindranath Tagore</td><td>⭐ 3.77</td></tr>
+            </table>
+        </div>
+
+        <div>
+            <span class="section-label">Activity Graph</span>
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=NotNahid&theme=github-compact" alt="Activity Graph" loading="lazy" class="dark-mode-img" style="width: 100%;">
+        </div>
+
+        <div>
+            <span class="section-label">Fun Corner</span>
+            <img src="https://readme-jokes.vercel.app/api?theme=radical&hideBorder" alt="Jokes Card" loading="lazy" class="dark-mode-img" style="width: 100%;">
+            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" loading="lazy" class="dark-mode-img" style="width: 100%; margin-top: 1rem;">
+        </div>
+    </div>
+
+    <div slot="footer-text">
+        A READER LIVES A THOUSAND LIVES BEFORE HE DIES. — GEORGE R.R. MARTIN
+    </div>
+</MainLayout>

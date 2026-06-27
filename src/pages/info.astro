@@ -1,0 +1,59 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout 
+    title="Info | Not Nahid" 
+    description="Learn more about me, my tech stack, what I'm currently learning, and my passion for creative projects."
+    activePage="info"
+>
+    <a href="/" data-astro-prefetch class="pill-btn back-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Back
+    </a>
+
+    <h1 class="page-title">Info</h1>
+
+    <div class="content-grid">
+        <div>
+            <span class="section-label">About Me</span>
+            <p class="bio-text">
+                I'm a tech enthusiast from Bangladesh with a curiosity for technology, design, films, and books. I enjoy learning new skills, building creative projects, and sharing what I discover along the way.
+            </p>
+            <br>
+            <p class="bio-text">
+                Based in: Bangladesh 🇧🇩<br>
+                Timezone: UTC+06:00
+            </p>
+        </div>
+
+        <div>
+            <span class="section-label">Tech Stack</span>
+            <div style="margin-top: 1rem;">
+                <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,vite,nextjs,tailwind,firebase,git,github,vscode&theme=dark&perline=6" alt="Skills" loading="lazy" style="width: 100%; max-width: 400px;">
+            </div>
+        </div>
+
+        <div>
+            <span class="section-label">Currently Learning</span>
+            <table class="data-table">
+                <tr><th>Tech</th><th>Progress</th></tr>
+                <tr><td>Next.js</td><td>60%</td></tr>
+                <tr><td>Tailwind CSS</td><td>75%</td></tr>
+                <tr><td>Firebase</td><td>45%</td></tr>
+            </table>
+        </div>
+
+        <div>
+            <span class="section-label">Fun Fact</span>
+            <p class="bio-text" style="font-size: 18px; line-height: 1.2;">
+                "Most of my projects start with, "I wonder if I can make this...""
+            </p>
+        </div>
+    </div>
+
+    <div slot="footer-text">
+        A PASSIONATE DEVELOPER FROM BANGLADESH WHO LOVES LEARNING, CREATING, AND SHARING.
+    </div>
+</MainLayout>

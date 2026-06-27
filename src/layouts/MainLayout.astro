@@ -1,0 +1,117 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import { ClientRouter } from 'astro:transitions';
+
+const { 
+    title = "Not Nahid | Creative Director & Developer",
+    description = "NotNahid - A passionate developer from Bangladesh specializing in minimalist interfaces, retro-tech aesthetics, and the intersection of classical literature and digital design.",
+    activePage = ""
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="notnahid, Not Nahid, Nahidul, Web Developer Bangladesh, Creative Director, Neo-Brutalism, Retro-tech, Front-end Developer, React Developer">
+    <meta name="author" content="Not Nahid">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/218765473?s=48&v=4">
+    <link rel="canonical" href={Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url.href}>
+    <ClientRouter />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="https://raw.githubusercontent.com/NotNahid/NotNahid/refs/heads/main/notnahid.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/NotNahid/NotNahid/refs/heads/main/notnahid.webp">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Not Nahid",
+      "alternateName": "notnahid",
+      "url": "http://notnahid.rf.gd/",
+      "image": "https://svg-banners.vercel.app/api?type=rainbow&text1=NotNahid&text2=Web%20Developer&width=800&height=400",
+      "sameAs": [
+        "https://github.com/NotNahid",
+        "https://www.facebook.com/notnahid",
+        "https://x.com/notnahid",
+        "https://www.instagram.com/notnahid.me/",
+        "https://www.goodreads.com/notnahid"
+      ],
+      "jobTitle": "Creative Director & Developer",
+      "knowsAbout": ["Web Development", "React", "JavaScript", "Minimalist Design", "Classical Literature"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Bangladesh"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF6B6B"/><stop offset="30%" style="stop-color:#FFE66D"/><stop offset="60%" style="stop-color:#4ECDC4"/><stop offset="100%" style="stop-color:#A855F7"/>
+            </linearGradient>
+            <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#F472B6"/><stop offset="35%" style="stop-color:#FB923C"/><stop offset="70%" style="stop-color:#FACC15"/><stop offset="100%" style="stop-color:#34D399"/>
+            </linearGradient>
+            <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#818CF8"/><stop offset="40%" style="stop-color:#E879F9"/><stop offset="75%" style="stop-color:#FB7185"/><stop offset="100%" style="stop-color:#FDBA74"/>
+            </linearGradient>
+            <linearGradient id="grad4" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" style="stop-color:#2DD4BF"/><stop offset="33%" style="stop-color:#38BDF8"/><stop offset="66%" style="stop-color:#A78BFA"/><stop offset="100%" style="stop-color:#F472B6"/>
+            </linearGradient>
+            <linearGradient id="grad5" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" style="stop-color:#FDE047"/><stop offset="25%" style="stop-color:#FB923C"/><stop offset="50%" style="stop-color:#F43F5E"/><stop offset="75%" style="stop-color:#D946EF"/><stop offset="100%" style="stop-color:#8B5CF6"/>
+            </linearGradient>
+            <linearGradient id="grad6" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#06B6D4"/><stop offset="30%" style="stop-color:#10B981"/><stop offset="60%" style="stop-color:#84CC16"/><stop offset="100%" style="stop-color:#EAB308"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <slot />
+
+    <div class="bottom-layout">
+        <div class="bio-text">
+            <slot name="footer-text" />
+        </div>
+        <Navigation activePage={activePage} />
+    </div>
+
+    <script>
+        // --- ARTISTIC NEO-BRUTALIST CONSOLE ---
+        const firstLetterStyle = 'color: #D8FF7C; font-family: "Georgia", serif; font-style: italic; font-size: 60px; font-weight: 900; line-height: 1; vertical-align: middle;';
+        const restOfStyle = 'background: #D8FF7C; color: #000; padding: 10px 20px; border: 4px solid #000; font-family: "Syne", sans-serif; font-size: 18px; font-weight: 900; text-transform: uppercase; vertical-align: middle;';
+        const titleStyle = 'color: #D8FF7C; font-family: "Syne", sans-serif; font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 10px 0;';
+        const linkStyle = 'color: #D8FF7C; font-weight: bold; text-decoration: underline;';
+
+        console.log('%cH%cEY FELLOW INTERNET PERSON... GOT YA!', firstLetterStyle, restOfStyle);
+        console.log('%cNOT NAHID', titleStyle);
+        console.log('%c- GitHub: %chttps://github.com/NotNahid', 'color: #D8FF7C; font-weight: bold;', linkStyle);
+    </script>
+
+
+</body>
+</html>

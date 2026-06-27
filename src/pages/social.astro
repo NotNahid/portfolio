@@ -1,0 +1,39 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout 
+    title="Social | Not Nahid" 
+    description="Connect with me on various social platforms including GitHub, Twitter, Facebook, and more."
+    activePage="social"
+>
+    <a href="/" data-astro-prefetch class="pill-btn back-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Back
+    </a>
+
+    <h1 class="page-title">Social</h1>
+
+    <div class="content-grid">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 0;">
+            <span class="section-label" style="display: inline-block; width: auto; padding: 0 20px;">Let's Connect</span>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                <a href="https://www.facebook.com/notnahid" target="_blank"><img src="https://img.shields.io/badge/Facebook-000000?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" loading="lazy"></a>
+                <a href="https://x.com/notnahid" target="_blank"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" loading="lazy"></a>
+                <a href="https://www.instagram.com/notnahid.me/" target="_blank"><img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" loading="lazy"></a>
+                <a href="https://www.threads.net/@pustokkit" target="_blank"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" loading="lazy"></a>
+                <a href="https://www.pinterest.com/not_nahid/" target="_blank"><img src="https://img.shields.io/badge/Pinterest-000000?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest" loading="lazy"></a>
+                <a href="https://www.goodreads.com/notnahid" target="_blank"><img src="https://img.shields.io/badge/Goodreads-000000?style=for-the-badge&logo=goodreads&logoColor=white" alt="Goodreads" loading="lazy"></a>
+                <a href="mailto:nahidul.live@gmail.com"><img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" loading="lazy"></a>
+            </div>
+            <p class="bio-text" style="margin-top: 2rem; width: 100%; max-width: none;">
+                If it's creative, thoughtful, or just genuinely interesting, I'm probably up for the conversation.
+            </p>
+        </div>
+    </div>
+
+    <div slot="footer-text">
+        BASED IN BANGLADESH — AVAILABLE WORLDWIDE.
+    </div>
+</MainLayout>

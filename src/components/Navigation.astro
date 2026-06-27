@@ -1,0 +1,16 @@
+---
+const { activePage } = Astro.props;
+---
+<div class="nav-container">
+    <a href="/works" data-astro-prefetch class={`pill-btn ${activePage === 'works' ? 'active' : ''}`}>Works</a>
+    <a href="/info" data-astro-prefetch class={`pill-btn ${activePage === 'info' ? 'active' : ''}`}>Info</a>
+    <a href="/labs" data-astro-prefetch class={`pill-btn ${activePage === 'labs' ? 'active' : ''}`}>Labs</a>
+    <a href="/social" data-astro-prefetch class={`pill-btn ${activePage === 'social' ? 'active' : ''}`}>Social</a>
+</div>
+
+<style>
+    .active {
+        background-color: var(--text-color);
+        color: var(--bg-color);
+    }
+</style>

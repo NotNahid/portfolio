@@ -1,0 +1,139 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout 
+    title="Works | Not Nahid" 
+    description="Explore my portfolio of projects, including the PowerShell Toolkit, Vintage Book App, and various automation tools."
+    activePage="works"
+>
+    <a href="/" data-astro-prefetch class="pill-btn back-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Back
+    </a>
+
+    <h1 class="page-title">Works</h1>
+
+    <div class="content-grid">
+        <!-- Featured Project: PowerShell Toolkit -->
+        <div style="grid-column: 1 / -1;">
+            <span class="section-label">Featured Project</span>
+            <div style="border: 2px solid var(--accent-border); padding: 2.5rem; margin-top: 1rem; background: var(--card-bg); position: relative; overflow: hidden;">
+                <h2 style="font-family: 'Syne'; text-transform: uppercase; font-size: clamp(24px, 4vw, 42px); line-height: 1;">PowerShell Toolkit</h2>
+                <p class="bio-text" style="margin: 1.5rem 0; max-width: 600px;">A searchable GUI dashboard for Windows utilities. A "personal app store" experience launched via a single command. Features a Catppuccin-inspired UI with live status updates.</p>
+                
+                <!-- One-liner Copy Box -->
+                <div style="background: rgba(0,0,0,0.05); border: 2px dashed var(--accent-border); padding: 1rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                    <code style="font-family: monospace; font-weight: bold; color: var(--text-color); font-size: clamp(10px, 1.5vw, 14px);">irm is.gd/notnahid | iex</code>
+                    <button id="copy-btn" class="pill-btn" style="font-size: 10px; padding: 4px 12px; background: var(--text-color); color: var(--bg-color);">Copy</button>
+                </div>
+
+                <div style="display: flex; gap: 10px; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--accent-border); padding: 2px 8px;">PowerShell</span>
+                    <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--accent-border); padding: 2px 8px;">Windows Forms</span>
+                    <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--accent-border); padding: 2px 8px;">Automation</span>
+                </div>
+                <a href="https://github.com/NotNahid/powershell" target="_blank" class="pill-btn" style="display: inline-block;">View Repository</a>
+            </div>
+        </div>
+
+        <!-- Selected Projects Grid -->
+        <div style="grid-column: 1 / -1; margin-top: 2rem;">
+            <span class="section-label">Selected Projects</span>
+        </div>
+
+        <div style="border: 2px solid var(--accent-border); padding: 1.5rem; background: var(--card-bg); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h3 style="font-family: 'Syne'; text-transform: uppercase; margin-bottom: 0.5rem;">Vintage Book App</h3>
+                <p style="font-size: 12px; line-height: 1.4; margin-bottom: 1rem;">A refined book discovery platform for classical literature lovers. Built with a focus on minimalist aesthetics and intuitive user experience.</p>
+                <div style="display: flex; gap: 5px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">React</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Tailwind</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">API Integration</span>
+                </div>
+            </div>
+            <a href="https://github.com/NotNahid/vintage-book-app" target="_blank" class="pill-btn" style="font-size: 10px; padding: 6px 16px; align-self: flex-start;">Repository</a>
+        </div>
+
+        <div style="border: 2px solid var(--accent-border); padding: 1.5rem; background: var(--card-bg); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h3 style="font-family: 'Syne'; text-transform: uppercase; margin-bottom: 0.5rem;">LiteWall</h3>
+                <p style="font-size: 12px; line-height: 1.4; margin-bottom: 1rem;">A production-ready live video wallpaper engine for Windows using VLC backend. Features a modern GUI built with CustomTkinter.</p>
+                <div style="display: flex; gap: 5px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Python</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">VLC</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Win32 API</span>
+                </div>
+            </div>
+            <a href="https://github.com/NotNahid/LiteWall" target="_blank" class="pill-btn" style="font-size: 10px; padding: 6px 16px; align-self: flex-start;">Repository</a>
+        </div>
+
+        <div style="border: 2px solid var(--accent-border); padding: 1.5rem; background: var(--card-bg); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h3 style="font-family: 'Syne'; text-transform: uppercase; margin-bottom: 0.5rem;">Daraz Scraper</h3>
+                <p style="font-size: 12px; line-height: 1.4; margin-bottom: 1rem;">Advanced Python-based e-commerce scraper with asynchronous fetching and a Streamlit dashboard for data visualization and analysis.</p>
+                <div style="display: flex; gap: 5px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Python</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Streamlit</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">SQLAlchemy</span>
+                </div>
+            </div>
+            <a href="https://github.com/NotNahid/drz" target="_blank" class="pill-btn" style="font-size: 10px; padding: 6px 16px; align-self: flex-start;">Repository</a>
+        </div>
+
+        <div style="border: 2px solid var(--accent-border); padding: 1.5rem; background: var(--card-bg); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h3 style="font-family: 'Syne'; text-transform: uppercase; margin-bottom: 0.5rem;">Bookmarklet Collection</h3>
+                <p style="font-size: 12px; line-height: 1.4; margin-bottom: 1rem;">Collection of powerful JavaScript bookmarklets for browser automation, media downloading, and social media management.</p>
+                <div style="display: flex; gap: 5px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">JavaScript</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Automation</span>
+                    <span style="font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid var(--accent-border); padding: 1px 5px;">Browser</span>
+                </div>
+            </div>
+            <a href="https://github.com/NotNahid/bookmarklet" target="_blank" class="pill-btn" style="font-size: 10px; padding: 6px 16px; align-self: flex-start;">Repository</a>
+        </div>
+
+        <!-- GitHub Stats Section -->
+        <div style="grid-column: 1 / -1; margin-top: 4rem;">
+            <span class="section-label">GitHub Ecosystem</span>
+        </div>
+
+        <div>
+            <img src="https://github-readme-stats.vercel.app/api?username=NotNahid&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" loading="lazy" class="dark-mode-img" style="width: 100%;">
+        </div>
+
+        <div>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NotNahid&layout=compact&theme=radical&hide_border=true" alt="Top Languages" loading="lazy" class="dark-mode-img" style="width: 100%;">
+        </div>
+
+        <div>
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=NotNahid&theme=radical&hide_border=true" alt="GitHub Streak" loading="lazy" class="dark-mode-img" style="width: 100%;">
+        </div>
+    </div>
+
+    <div slot="footer-text">
+        DISCOVER THE CODE BEHIND THESE PROJECTS ON MY <a href="https://github.com/NotNahid?tab=repositories" style="color: inherit;">GITHUB</a>.
+    </div>
+</MainLayout>
+
+<script>
+    const copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const command = 'irm is.gd/notnahid | iex';
+            navigator.clipboard.writeText(command).then(() => {
+                const originalText = copyBtn.innerText;
+                copyBtn.innerText = 'Copied!';
+                copyBtn.style.background = 'var(--bg-color)';
+                copyBtn.style.color = 'var(--text-color)';
+                setTimeout(() => {
+                    copyBtn.innerText = originalText;
+                    copyBtn.style.background = 'var(--text-color)';
+                    copyBtn.style.color = 'var(--bg-color)';
+                }, 2000);
+            });
+        });
+    }
+</script>
